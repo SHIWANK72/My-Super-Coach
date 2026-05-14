@@ -479,7 +479,7 @@ const ONBOARDING = [
   { key: 'level', q: "Current English level?", type: 'select', options: ['Beginner', 'Elementary', 'Intermediate', 'Upper-Intermediate', 'Advanced'] },
   { key: 'field', q: "Your profession or field?", placeholder: "e.g. Software Engineer, Doctor, Student..." },
   { key: 'country', q: "Target country?", placeholder: "e.g. Taiwan, USA, UK, Canada, Australia..." },
-  { key: 'geminiKey', q: "Gemini API Key (for AI features)", placeholder: "AIzaSy...", hint: "Free at aistudio.google.com → Create API Key" },
+  
 ];
  
 /* ═══════════════════════════════════════════════════════════════════
