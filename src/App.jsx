@@ -661,8 +661,15 @@ Max 100 words. Be warm and specific to their profession.`
     if (!file) return;
     setObResumeFile(file);
     const reader = new FileReader();
-    reader.onload = (ev) => setObResume(ev.target.result);
-    reader.readAsText(file);
+    reader.onload = (ev) => {
+      const text = ev.target.result;
+      setObResume(text || `Resume file: ${file.name}`);
+    };
+    if (file.type === 'application/pdf') {
+      setObResume(`Resume uploaded: ${file.name} - PDF file`);
+    } else {
+      reader.readAsText(file);
+    }
   };
  
   /* ── CHAT ── */
