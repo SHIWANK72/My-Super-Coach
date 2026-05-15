@@ -3,7 +3,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAxGM8uwA8VVTUqbUaA3c1QLchMOj4Ckwg",
+  apiKey: "AIzaSyDI702IvJeWC8gwUqPwHbnKmjQUy7Uayok",
   authDomain: "smart-coach-d7951.firebaseapp.com",
   projectId: "smart-coach-d7951",
   storageBucket: "smart-coach-d7951.firebasestorage.app",
