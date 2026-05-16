@@ -134,7 +134,7 @@ const stopSpeak = () => {
    GEMINI API — via backend proxy
 ═══════════════════════════════════════════════════════════════════ */
 const gemini = async (prompt) => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const apiKey = 'AIzaSyCpo9RBUgWhFp_jPH8qhkszGQIIPaWHajs';
   const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
