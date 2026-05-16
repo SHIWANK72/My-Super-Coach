@@ -138,7 +138,10 @@ const gemini = async (prompt) => {
   const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ prompt }),
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: { maxOutputTokens: 800, temperature: 0.75 },
+    }),
   });
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   const d = await r.json();
